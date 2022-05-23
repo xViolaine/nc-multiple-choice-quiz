@@ -2,12 +2,14 @@ const correctAnswer = document.getElementById("correct_answer!")
 const startButton = document.getElementById('start')
 const question = document.getElementById('question')
 const answers = document.getElementById('answers')
+const mainQuestion =document.getElementById('mainQuestion')
 
 
-function printMessage() {
-  console.log(message)
-  message.innerText = "You're correct"
-}
+// function printMessage() {
+//   console.log(message)
+//   message.innerText = "You're correct"
+// }
+
 
 function printQuestion1() {
   question.innerText = "What is the best animal?"
@@ -19,11 +21,15 @@ function printQuestion1() {
   btn3.innerText = "Otto"
   const btn4 = document.createElement("button")
   btn4.innerText = "Dogs"
+  mainQuestion.appendChild(btn1)
+  mainQuestion.appendChild(btn2)
+  mainQuestion.appendChild(btn3)
+  mainQuestion.appendChild(btn4)
 }
 
 startButton.addEventListener('click', printQuestion1)
 
-correctAnswer.addEventListener('click', printMessage)
+// correctAnswer.addEventListener('click', printMessage)
 
 
 
